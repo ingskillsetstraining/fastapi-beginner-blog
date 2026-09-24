@@ -111,3 +111,8 @@ Learning framework FastAPI by building a fully static blog
 
 
 ## BAB 3: Menguasai Templating Engine (Jinja2)
+
+#### Unit 3.1: Integrasi `Jinja2Templates` ke dalam FastAPI
+
+        modified:   jurnal.md
+        modified:   src/main.py
