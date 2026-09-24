@@ -70,3 +70,6 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         new file:   main.py
+
+
+## BAB 2: Struktur Folder & Manajemen File Statis
