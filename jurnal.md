@@ -128,3 +128,9 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         modified:   src/main.py
         modified:   templates/index.html
+
+#### Unit 3.4: Logika Jinja2 di HTML (Looping daftar artikel dan Kondisional IF)
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        modified:   templates/index.html
