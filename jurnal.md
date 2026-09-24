@@ -26,3 +26,47 @@ Learning framework FastAPI by building a fully static blog
             |-- Lib
             |-- Scripts
             `-- pyvenv.cfg
+
+#### Unit 1.4: Instalasi FastAPI, Uvicorn, dan Dependensi Awal via Terminal Windows
+
+        $ pip install fastapi uvicorn jinja2
+        ...
+        Installing collected packages: typing-extensions, MarkupSafe, idna, h11, click, annotated-types, ann
+        otated-doc, uvicorn, typing-inspection, pydantic-core, jinja2, anyio, starlette, pydantic, fastapi
+        Successfully installed MarkupSafe-3.0.3 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click
+        -8.5.0 fastapi-0.141.1 h11-0.16.0 idna-3.20 jinja2-3.1.6 pydantic-2.13.5 pydantic-core-2.46.5 starle
+        tte-1.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.53.0
+
+        [notice] A new release of pip is available: 24.2 -> 26.2.1
+        [notice] To update, run: python.exe -m pip install --upgrade pip
+        (venv313014)
+        Asus@DESKTOP-IC0RV3J MINGW64 /d/devspace/--FastAPI--/fastapi-beginner/project/fastapi-beginner-blog (main)
+        $ pip list
+        Package           Version
+        ----------------- -------
+        annotated-doc     0.0.5
+        annotated-types   0.8.0
+        anyio             4.15.1
+        click             8.5.0
+        fastapi           0.141.1
+        h11               0.16.0
+        idna              3.20
+        Jinja2            3.1.6
+        MarkupSafe        3.0.3
+        pip               24.2
+        pydantic          2.13.5
+        pydantic_core     2.46.5
+        starlette         1.7.0
+        typing_extensions 4.16.0
+        typing-inspection 0.4.4
+        uvicorn           0.53.0
+
+        $ python.exe -m pip install --upgrade pip
+        ...
+              Successfully uninstalled pip-24.2
+        Successfully installed pip-26.2.1
+
+#### Unit 1.5: Hello World Pertama & Memahami Lifecycle Uvicorn Server
+
+        modified:   jurnal.md
+        new file:   main.py
