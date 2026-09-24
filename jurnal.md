@@ -144,3 +144,8 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         new file:   src/posts.json
+
+#### Unit 4.3: Membuat Fungsi Python untuk Membaca File Data Artikel
+
+        modified:   jurnal.md
+        modified:   src/main.py

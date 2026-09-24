@@ -1,5 +1,7 @@
 # main.py
 
+# 1. Ambil modul bawaan Python untuk membaca file JSON
+import json
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -10,9 +12,18 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
+# 2. Buat fungsi pembantu untuk membaca database file JSON kita
+def ambil_semua_artikel():
+    # Buka file posts.json yang berada di dalam folder src
+    # 'r' berarti read (hanya membaca), encoding='utf-8' memastikan teks dibaca dengan aman
+    with open("src/posts.json", "r", encoding="utf-8") as file:
+        # Ubah teks mentah JSON menjadi List of Dictionaries di Python
+        data_artikel = json.load(file)
+    return data_artikel
+
+# 3. Aturan rute halaman utama (masih menggunakan data simulasi lama untuk sementara)
 @app.get("/")
 def baca_utama(request: Request):
-    # 1. Tambahkan daftar artikel (list of dictionaries) ke dalam data_kiriman
     data_kiriman = {
         "nama_pemilik": "Transformasi Anak Bangsa",
         "slogan": "Berbagai ilmu, pengetahuan, dan keterampilan tinggi bagi Genius Bangsa yang ingin bertumbuh.",
