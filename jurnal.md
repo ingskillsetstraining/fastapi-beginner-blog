@@ -73,3 +73,26 @@ Learning framework FastAPI by building a fully static blog
 
 
 ## BAB 2: Struktur Folder & Manajemen File Statis
+
+#### Unit 2.1: Merancang Arsitektur Folder Standar Industri (`src/`, `static/`, `templates/`)
+
+        modified:   jurnal.md
+        renamed:    main.py -> src/main.py
+        new file:   static/css/style.css
+        new file:   static/js/script.js
+        new file:   templates/index.html
+        
+        .
+        |-- LICENSE
+        |-- README.md
+        |-- jurnal.md
+        |-- src
+        |   `-- main.py
+        |-- static
+        |   |-- css
+        |   |   `-- style.css
+        |   |-- img
+        |   `-- js
+        |       `-- script.js
+        `-- templates
+            `-- index.html
