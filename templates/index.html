@@ -1,14 +1,15 @@
 <!-- templates/index.html -->
 
-<!-- 1. Beri tahu Jinja2 bahwa file ini meminjam rumah besar base.html -->
 {% extends 'base.html' %}
 
-<!-- 2. Isi ruangan kosong bernama 'judul' -->
 {% block judul %}Halaman Utama - Blog Statis{% endblock %}
 
-<!-- 3. Isi ruangan kosong bernama 'konten' -->
 {% block konten %}
-    <h1>Selamat Datang di Halaman Utama!</h1>
-    <p>Halaman ini menggunakan teknik Pewarisan Cetakan (Inheritance). Rapi dan efisien kan?</p>
+    <!-- Panggil kata kunci yang kita kirim dari file Python tadi -->
+    <h1>Selamat Datang di Blog {{ data.nama_pemilik }}!</h1>
+    <p><em>"{{ data.slogan }}"</em></p>
+
+    <hr>
+    <p>Halaman ini sekarang sudah terhubung dengan data asli dari mesin Python backend.</p>
 {% endblock %}
 

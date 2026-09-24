@@ -122,3 +122,9 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         new file:   templates/base.html
         modified:   templates/index.html
+
+#### Unit 3.3: Mengirim Data dari Backend Python ke Halaman HTML (*Context Passing*)
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        modified:   templates/index.html
