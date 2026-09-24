@@ -149,3 +149,8 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+#### Unit 4.4: Menampilkan Daftar Artikel di Halaman Utama (*Homepage*)
+
+        modified:   jurnal.md
+        modified:   src/main.py
