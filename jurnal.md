@@ -154,3 +154,5 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+## BAB 5: Dinamika URL & Halaman Detail Artikel
