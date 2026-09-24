@@ -5,3 +5,6 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   .gitignore
         new file:   jurnal.md
+
+
+## BAB 1: Fondasi & Instalasi Lingkungan Kerja
