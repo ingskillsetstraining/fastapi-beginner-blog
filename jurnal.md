@@ -102,3 +102,9 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   src/main.py
         modified:   static/css/style.css
+
+#### Unit 2.3: Membuat Halaman HTML Mentah Pertama Tanpa Templating
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        modified:   templates/index.html
