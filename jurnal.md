@@ -108,3 +108,6 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         modified:   src/main.py
         modified:   templates/index.html
+
+
+## BAB 3: Menguasai Templating Engine (Jinja2)
