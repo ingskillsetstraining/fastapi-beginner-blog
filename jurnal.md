@@ -81,7 +81,7 @@ Learning framework FastAPI by building a fully static blog
         new file:   static/css/style.css
         new file:   static/js/script.js
         new file:   templates/index.html
-        
+
         .
         |-- LICENSE
         |-- README.md
@@ -96,3 +96,9 @@ Learning framework FastAPI by building a fully static blog
         |       `-- script.js
         `-- templates
             `-- index.html
+
+
+#### Unit 2.2: Konfigurasi `StaticFiles` di FastAPI (Menghubungkan CSS, JS, dan Gambar)
+
+        modified:   src/main.py
+        modified:   static/css/style.css
