@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "slug": "belajar-fastapi-dari-nol",
+        "judul": "Belajar FastAPI dari Nol",
+        "ringkasan": "Panduan awal bagi pemula untuk memahami framework Python tercepat."
+    },
+    {
+        "id": 2,
+        "slug": "mengenal-jinja2-template",
+        "judul": "Mengenal Jinja2 Template",
+        "ringkasan": "Cara cerdas membuat halaman HTML menjadi dinamis dengan Python."
+    },
+    {
+        "id": 3,
+        "slug": "membangun-blog-statis",
+        "judul": "Membangun Blog Statis",
+        "ringkasan": "Langkah praktis menyusun arsitektur web static skala industri."
+    }
+    ]

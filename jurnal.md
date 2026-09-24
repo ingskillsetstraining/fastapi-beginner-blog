@@ -136,3 +136,11 @@ Learning framework FastAPI by building a fully static blog
         modified:   templates/index.html
 
 ## BAB 4: Manajemen Konten Blog Statis (Database File)
+
+#### Unit 4.1: Memilih Format Data Statis (Mengapa JSON/Markdown cocok untuk blog statis)
+        Pass
+
+#### Unit 4.2: Membuat 'Mock Database' Menggunakan File JSON
+
+        modified:   jurnal.md
+        new file:   src/posts.json
