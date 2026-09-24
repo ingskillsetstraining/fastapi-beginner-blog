@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ruangan Kosong 1: Untuk Judul Halaman yang Berbeda-beda -->
+    <title>{% block judul %}Blog Statis Saya{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Komponen yang akan selalu muncul di semua halaman -->
+    <header>
+        <h2>🌐 Navigasi Blog Statis</h2>
+        <hr>
+    </header>
+
+    <!-- Ruangan Kosong 2: Tempat Isi Konten Utama Setiap Halaman -->
+    <main>
+        {% block konten %}
+        <!-- Isi artikel atau konten unik akan masuk ke sini -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2026 Blog Statis Menakjubkan - Dibuat dengan FastAPI</p>
+    </footer>
+</body>
+</html>

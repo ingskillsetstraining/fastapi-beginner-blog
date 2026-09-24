@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog Statis Saya</title>
-    <!-- Hubungkan HTML ini ke alamat pipa CSS statis kita -->
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-    <h1>Selamat Datang di Blog Statis Saya!</h1>
-    <p>Ini adalah halaman HTML mentah pertama yang berhasil dikirim oleh FastAPI.</p>
-</body>
-</html>
+<!-- templates/index.html -->
+
+<!-- 1. Beri tahu Jinja2 bahwa file ini meminjam rumah besar base.html -->
+{% extends 'base.html' %}
+
+<!-- 2. Isi ruangan kosong bernama 'judul' -->
+{% block judul %}Halaman Utama - Blog Statis{% endblock %}
+
+<!-- 3. Isi ruangan kosong bernama 'konten' -->
+{% block konten %}
+    <h1>Selamat Datang di Halaman Utama!</h1>
+    <p>Halaman ini menggunakan teknik Pewarisan Cetakan (Inheritance). Rapi dan efisien kan?</p>
+{% endblock %}
+

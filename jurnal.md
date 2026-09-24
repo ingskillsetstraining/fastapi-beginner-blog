@@ -116,3 +116,9 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+#### Unit 3.2: Teknik *Template Inheritance* (Membuat `base.html` agar kode tidak duplikat)
+
+        modified:   jurnal.md
+        new file:   templates/base.html
+        modified:   templates/index.html
