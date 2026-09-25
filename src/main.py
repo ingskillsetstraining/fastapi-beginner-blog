@@ -16,22 +16,25 @@ def ambil_semua_artikel():
         data_artikel = json.load(file)
     return data_artikel
 
-# Aturan rute halaman utama yang baru dan bersih
 @app.get("/")
 def baca_utama(request: Request):
-    # 1. Panggil fungsi pembantu untuk mengambil data dari posts.json
     artikel_dari_json = ambil_semua_artikel()
-
-    # 2. Susun data kiriman, ambil daftar artikel langsung dari variabel di atas
     data_kiriman = {
         "nama_pemilik": "Transformasi Anak Bangsa",
         "slogan": "Berbagai ilmu, pengetahuan, dan keterampilan tinggi bagi Genius Bangsa yang ingin bertumbuh.",
-        "daftar_artikel": artikel_dari_json  # <-- Hubungkan ke data asli JSON
+        "daftar_artikel": artikel_dari_json
     }
+    return templates.TemplateResponse(request=request, name="index.html", context={"data": data_kiriman})
 
-    return templates.TemplateResponse(
-        request=request, 
-        name="index.html", 
-        context={"data": data_kiriman}
-    )
+# ==================== KODE BARU DI BAB 5 ====================
+
+# 1. Buat rute baru dengan tanda kurung kurawal ganda {slug} pada alamatnya
+@app.get("/blog/{slug}")
+# 2. Tangkap variabel {slug} tersebut ke dalam parameter fungsi sebagai teks (str)
+def baca_detail_artikel(request: Request, slug: str):
+    # Untuk latihan awal, kita kembalikan data JSON sederhana dulu untuk melihat hasilnya
+    return {
+        "pesan": "Anda sedang mencoba membaca artikel",
+        "slug_yang_diklik": slug
+    }
 

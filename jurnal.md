@@ -156,3 +156,8 @@ Learning framework FastAPI by building a fully static blog
         modified:   src/main.py
 
 ## BAB 5: Dinamika URL & Halaman Detail Artikel
+
+#### Unit 5.1: Memahami *Path Parameters* di FastAPI (Membuat URL `/blog/{slug}`)
+
+        modified:   jurnal.md
+        modified:   src/main.py
