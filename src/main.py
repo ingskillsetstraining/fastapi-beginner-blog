@@ -27,25 +27,27 @@ def baca_utama(request: Request):
 
 # ==================== MENCARI DATA BERDASARKAN SLUG (UNIT 5.3) ====================
 
+# ==================== RENDERING HTML DETAIL ARTIKEL (UNIT 5.4) ====================
+
 @app.get("/blog/{slug}")
 def baca_detail_artikel(
     request: Request, 
     slug: str = Path(..., min_length=3, max_length=50, pattern="^[a-z0-9-]+$")
 ):
-    # 1. Ambil seluruh daftar artikel asli dari file posts.json
     semua_artikel = ambil_semua_artikel()
-
-    # 2. Lakukan pencarian satu per satu di dalam daftar menggunakan looping for
+    
     artikel_ditemukan = None
     for artikel in semua_artikel:
         if artikel["slug"] == slug:
             artikel_ditemukan = artikel
-            break # Jika sudah cocok dan ketemu, langsung hentikan perulangan pencarian
-
-    # 3. Antisipasi jika slug-nya legal (lolos REGEX) tetapi artikelnya tidak ada di posts.json
+            break
+            
     if artikel_ditemukan is None:
-        # Lempar pesan eror status 404 (Halaman Tidak Ditemukan) secara resmi
         raise HTTPException(status_code=404, detail="Maaf, tulisan blog tidak ditemukan")
-
-    # 4. Jika ketemu, kirimkan data artikel utuh tersebut (sementara berbentuk data JSON dulu)
-    return artikel_ditemukan
+        
+    # KODE PERBAIKAN: Kirim data artikel ke file cetakan detail.html melalui wadah context
+    return templates.TemplateResponse(
+        request=request,
+        name="detail.html",
+        context={"artikel": artikel_ditemukan} # <-- Kita bungkus dengan kata kunci 'artikel'
+    )

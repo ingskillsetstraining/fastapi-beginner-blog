@@ -171,3 +171,9 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+#### Unit 5.4: Membuat Halaman Detail Artikel Singel yang Dinamis
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        new file:   templates/detail.html

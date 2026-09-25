@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<!-- 1. Isi ruangan judul tab browser secara dinamis berdasarkan judul artikel -->
+{% block judul %}{{ artikel.judul }} - Detail Artikel{% endblock %}
+
+{% block konten %}
+    <!-- 2. Tampilkan Judul Utama Artikel -->
+    <h1>{{ artikel.judul }}</h1>
+    
+    <div style="margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-left: 5px solid navy;">
+        <!-- 3. Tampilkan Isi/Ringkasan Artikel -->
+        <p style="font-size: 18px; line-height: 1.6;">{{ artikel.ringkasan }}</p>
+    </div>
+    
+    <hr>
+    <!-- 4. Tombol navigasi sederhana untuk kembali ke Halaman Utama -->
+    <p><a href="/">← Kembali ke Daftar Artikel</a></p>
+{% endblock %}
