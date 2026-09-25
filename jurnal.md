@@ -166,3 +166,8 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+#### Unit 5.3: Menghubungkan Parameter URL dengan Data Artikel
+
+        modified:   jurnal.md
+        modified:   src/main.py
