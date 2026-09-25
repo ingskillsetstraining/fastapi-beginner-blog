@@ -161,3 +161,8 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   src/main.py
+
+#### Unit 5.2: Validasi Input Parameter (Mengamankan URL dari input ilegal)
+
+        modified:   jurnal.md
+        modified:   src/main.py
