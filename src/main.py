@@ -51,3 +51,15 @@ def baca_detail_artikel(
         name="detail.html",
         context={"artikel": artikel_ditemukan} # <-- Kita bungkus dengan kata kunci 'artikel'
     )
+
+
+# ==================== HALAMAN STATIS ABOUT ====================
+
+@app.get("/about")
+def baca_tentang(request: Request):
+    # Langsung render halaman about.html tanpa membawa data eksternal dari JSON
+    return templates.TemplateResponse(
+        request=request,
+        name="about.html",
+        context={}
+    )

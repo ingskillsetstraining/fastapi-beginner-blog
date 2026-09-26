@@ -177,3 +177,9 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         modified:   src/main.py
         new file:   templates/detail.html
+
+#### Unit 5.5: Membuat Halaman Statis Tambahan (templates/about.html)
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        new file:   templates/about.html
