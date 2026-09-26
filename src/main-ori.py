@@ -25,32 +25,9 @@ def baca_utama(request: Request):
     }
     return templates.TemplateResponse(request=request, name="index.html", context={"data": data_kiriman})
 
+# ==================== MENCARI DATA BERDASARKAN SLUG (UNIT 5.3) ====================
 
-# ==================== KODE DIPERBAHARUI DI UNIT 5.10 ====================
-
-@app.get("/")
-def baca_utama(request: Request):
-    artikel_dari_json = ambil_semua_artikel()
-    data_kiriman = {
-        "nama_pemilik": "Transformasi Anak Bangsa",
-        "slogan": "Berbagai ilmu, pengetahuan, dan keterampilan tinggi bagi Genius Bangsa yang ingin bertumbuh.",
-        "daftar_artikel": artikel_dari_json
-    }
-    # Tambahkan nama_blog global di sini
-    return templates.TemplateResponse(
-        request=request, 
-        name="index.html", 
-        context={"data": data_kiriman, "nama_blog": "Transformasi Anak Bangsa"}
-    )
-
-@app.get("/about")
-def baca_tentang(request: Request):
-    # Kirim nama_blog global ke halaman tentang
-    return templates.TemplateResponse(
-        request=request,
-        name="about.html",
-        context={"nama_blog": "Transformasi Anak Bangsa"}
-    )
+# ==================== RENDERING HTML DETAIL ARTIKEL (UNIT 5.4) ====================
 
 @app.get("/blog/{slug}")
 def baca_detail_artikel(
@@ -58,6 +35,7 @@ def baca_detail_artikel(
     slug: str = Path(..., min_length=3, max_length=50, pattern="^[a-z0-9-]+$")
 ):
     semua_artikel = ambil_semua_artikel()
+    
     artikel_ditemukan = None
     for artikel in semua_artikel:
         if artikel["slug"] == slug:
@@ -67,12 +45,21 @@ def baca_detail_artikel(
     if artikel_ditemukan is None:
         raise HTTPException(status_code=404, detail="Maaf, tulisan blog tidak ditemukan")
         
-    # Pastikan nama_blog global ikut dikirim
+    # KODE PERBAIKAN: Kirim data artikel ke file cetakan detail.html melalui wadah context
     return templates.TemplateResponse(
         request=request,
         name="detail.html",
-        context={
-            "artikel": artikel_ditemukan,
-            "nama_blog": "Transformasi Anak Bangsa"
-        }
+        context={"artikel": artikel_ditemukan} # <-- Kita bungkus dengan kata kunci 'artikel'
+    )
+
+
+# ==================== HALAMAN STATIS ABOUT ====================
+
+@app.get("/about")
+def baca_tentang(request: Request):
+    # Langsung render halaman about.html tanpa membawa data eksternal dari JSON
+    return templates.TemplateResponse(
+        request=request,
+        name="about.html",
+        context={}
     )

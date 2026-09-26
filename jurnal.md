@@ -204,3 +204,13 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   templates/base.html
+
+#### Unit 5.10: Dinamisasi Judul Halaman (Page Title) Berbasis Data Backend (Posisi Aktif Saat Ini)
+
+        modified:   jurnal.md
+        new file:   src/main-ori.py
+        modified:   src/main.py
+        modified:   templates/about.html
+        modified:   templates/base.html
+        modified:   templates/detail.html
+        modified:   templates/index.html

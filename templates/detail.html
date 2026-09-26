@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
-<!-- 1. Isi ruangan judul tab browser secara dinamis berdasarkan judul artikel -->
-{% block judul %}{{ artikel.judul }} - Detail Artikel{% endblock %}
+{% block judul %}{{ nama_blog }} - {{ artikel.judul }}{% endblock %}
 
 {% block konten %}
     <!-- 2. Tampilkan Judul Utama Artikel -->

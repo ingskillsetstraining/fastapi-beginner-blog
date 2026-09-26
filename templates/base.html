@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Ruangan Kosong 1: Untuk Judul Halaman yang Berbeda-beda -->
-    <title>{% block judul %}Blog Statis Saya{% endblock %}</title>
+    <title>{% block judul %}{{ artikel.judul }} | {{ nama_blog }}{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
