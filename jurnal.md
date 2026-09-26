@@ -183,3 +183,8 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         modified:   src/main.py
         new file:   templates/about.html
+
+#### Unit 5.6: Membuat Menu Navigasi Global pada Halaman Induk (templates/base.html)
+
+        modified:   jurnal.md
+        modified:   templates/base.html
