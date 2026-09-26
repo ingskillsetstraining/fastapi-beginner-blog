@@ -26,7 +26,7 @@ def baca_utama(request: Request):
     return templates.TemplateResponse(request=request, name="index.html", context={"data": data_kiriman})
 
 
-# ==================== KODE DIPERBAHARUI DI UNIT 5.10 ====================
+# ==================== KODE RAMPING & BERSIH (UNIT 5.11) ====================
 
 @app.get("/")
 def baca_utama(request: Request):
@@ -36,20 +36,20 @@ def baca_utama(request: Request):
         "slogan": "Berbagai ilmu, pengetahuan, dan keterampilan tinggi bagi Genius Bangsa yang ingin bertumbuh.",
         "daftar_artikel": artikel_dari_json
     }
-    # Tambahkan nama_blog global di sini
+    # Teks nama_blog yang berulang sudah dihapus dari context
     return templates.TemplateResponse(
         request=request, 
         name="index.html", 
-        context={"data": data_kiriman, "nama_blog": "Transformasi Anak Bangsa"}
+        context={"data": data_kiriman}
     )
 
 @app.get("/about")
 def baca_tentang(request: Request):
-    # Kirim nama_blog global ke halaman tentang
+    # Context kembali kosong dan bersih
     return templates.TemplateResponse(
         request=request,
         name="about.html",
-        context={"nama_blog": "Transformasi Anak Bangsa"}
+        context={}
     )
 
 @app.get("/blog/{slug}")
@@ -67,12 +67,9 @@ def baca_detail_artikel(
     if artikel_ditemukan is None:
         raise HTTPException(status_code=404, detail="Maaf, tulisan blog tidak ditemukan")
         
-    # Pastikan nama_blog global ikut dikirim
+    # Teks nama_blog yang berulang sudah dihapus dari context
     return templates.TemplateResponse(
         request=request,
         name="detail.html",
-        context={
-            "artikel": artikel_ditemukan,
-            "nama_blog": "Transformasi Anak Bangsa"
-        }
+        context={"artikel": artikel_ditemukan}
     )

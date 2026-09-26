@@ -214,3 +214,13 @@ Learning framework FastAPI by building a fully static blog
         modified:   templates/base.html
         modified:   templates/detail.html
         modified:   templates/index.html
+
+#### Unit 5.11: Optimalisasi Warisan Judul Menggunakan Desain Induk Jinja2 
+
+        modified:   jurnal.md
+        deleted:    src/main-ori.py
+        modified:   src/main.py
+        modified:   templates/about.html
+        modified:   templates/base.html
+        modified:   templates/detail.html
+        modified:   templates/index.html
