@@ -15,7 +15,11 @@
     <!-- Jalankan perulangan Jinja2 untuk membaca setiap artikel -->
     {% for artikel in data.daftar_artikel %}
         <div style="margin-bottom: 20px; border-left: 4px solid navy; padding-left: 10px;">
-            <h3>{{ artikel.judul }}</h3>
+            <h3>
+                <a href="/blog/{{ artikel.slug }}" style="text-decoration: none; color: navy;">
+                    {{ artikel.judul }}
+                </a>
+            </h3>
             <p>{{ artikel.ringkasan }}</p>
         </div>
     {% endfor %}

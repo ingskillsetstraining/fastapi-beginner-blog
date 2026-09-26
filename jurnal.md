@@ -194,3 +194,8 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         modified:   static/css/style.css
         modified:   templates/base.html
+
+#### Unit 5.8: Menghubungkan Judul Artikel Halaman Utama ke Halaman Detail (Memasang Tautan Klik)
+
+        modified:   jurnal.md
+        modified:   templates/index.html
