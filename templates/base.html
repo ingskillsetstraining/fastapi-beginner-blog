@@ -8,17 +8,21 @@
 </head>
 <body>
     <!-- Komponen yang akan selalu muncul di semua halaman -->
+
     <header>
         <h2>🌐 Navigasi Blog Statis</h2>
-        <!-- Pasang menu navigasi fisik menggunakan tag tautan HTML -->
         <nav>
-            <!-- Tautan menuju Halaman Utama (Home) -->
-            <a href="/" style="margin-right: 15px; text-decoration: none; color: black;">
+            <!-- 1. Menu Home: Jinja2 hanya bertugas menyuntikkan kata 'active' jika jalurnya cocok -->
+            <a 
+                href="/" 
+                class="nav-link {% if request.url.path == '/' %}active{% endif %}">
                 Home
             </a>
             
-            <!-- Tautan menuju Halaman Profil (About) -->
-            <a href="/about" style="text-decoration: none; color: black;">
+            <!-- 2. Menu About: Logika yang sama diterapkan untuk mengaktifkan kelas active -->
+            <a 
+                href="/about" 
+                class="nav-link {% if request.url.path == '/about' %}active{% endif %}">
                 About
             </a>
         </nav>
