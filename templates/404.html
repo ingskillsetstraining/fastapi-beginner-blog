@@ -1,0 +1,18 @@
+<!-- templates/404.html -->
+
+{% extends 'base.html' %}
+
+{% block judul %}Halaman Tidak Ditemukan - 404{% endblock %}
+
+{% block konten %}
+    <div style="text-align: center; padding: 50px 10px;">
+        <h1 style="font-size: 72px; color: navy; margin-bottom: 10px;">⚠️ 404</h1>
+        <h2>Aduh! Halaman yang Anda Cari Tidak Ditemukan</h2>
+        <p style="color: #666; margin-bottom: 30px;">
+            Mungkin alamat URL yang Anda ketik salah, atau artikel tersebut sudah dihapus.
+        </p>
+        <a href="/" style="display: inline-block; padding: 10px 20px; background-color: navy; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            🏠 Kembali ke Beranda
+        </a>
+    </div>
+{% endblock %}

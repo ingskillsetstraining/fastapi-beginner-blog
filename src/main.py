@@ -1,11 +1,30 @@
 import json
 from fastapi import FastAPI, Request
+from fastapi.exceptions import HTTPException 
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 # 1. Impor modul router blog dari src/blog.py
 from src import blog
 
 app = FastAPI()
+
+# ==================== HANDLER EROR GLOBAL 404 (UNIT 6.2) ====================
+@app.exception_handler(HTTPException)
+def handler_eror_kustom(request: Request, exc: HTTPException):
+    # Jika kode status erornya adalah 404, lempar langsung ke HTML kustom kita
+    if exc.status_code == 404:
+        return templates.TemplateResponse(
+            request=request, 
+            name="404.html", 
+            context={}, 
+            status_code=404
+        )
+    # Jika eror kode lain, biarkan FastAPI menangani seperti biasa
+    return templates.TemplateResponse(
+        request=request, 
+        name="index.html", 
+        context={"detail": exc.detail}
+    )
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

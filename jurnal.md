@@ -232,3 +232,9 @@ Learning framework FastAPI by building a fully static blog
         modified:   jurnal.md
         new file:   src/blog.py
         modified:   src/main.py
+
+### Unit 6.2: Menangani Error 404 (Halaman Tidak Ditemukan) dengan Elegan
+
+        modified:   jurnal.md
+        modified:   src/main.py
+        new file:   templates/404.html
