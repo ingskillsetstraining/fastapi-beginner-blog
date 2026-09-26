@@ -224,3 +224,5 @@ Learning framework FastAPI by building a fully static blog
         modified:   templates/base.html
         modified:   templates/detail.html
         modified:   templates/index.html
+
+## BAB 6: Refactoring & Best Practices (Skala Lead Architect)
