@@ -226,3 +226,9 @@ Learning framework FastAPI by building a fully static blog
         modified:   templates/index.html
 
 ## BAB 6: Refactoring & Best Practices (Skala Lead Architect)
+
+### Unit 6.1: Memecah Kode Menggunakan `APIRouter` (Merapikan struktur file)
+
+        modified:   jurnal.md
+        new file:   src/blog.py
+        modified:   src/main.py
