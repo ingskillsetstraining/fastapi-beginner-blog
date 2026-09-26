@@ -199,3 +199,8 @@ Learning framework FastAPI by building a fully static blog
 
         modified:   jurnal.md
         modified:   templates/index.html
+
+#### Unit 5.9: Refactoring Otak Navigasi (Menjaga Active State Home Tetap Menyala di Halaman Detail)
+
+        modified:   jurnal.md
+        modified:   templates/base.html

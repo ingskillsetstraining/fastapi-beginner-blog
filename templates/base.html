@@ -8,18 +8,17 @@
 </head>
 <body>
     <!-- Komponen yang akan selalu muncul di semua halaman -->
-
     <header>
         <h2>🌐 Navigasi Blog Statis</h2>
         <nav>
-            <!-- 1. Menu Home: Jinja2 hanya bertugas menyuntikkan kata 'active' jika jalurnya cocok -->
+            <!-- PERBAIKAN ARSITEKTUR: Menu Home akan menyala aktif jika berada di halaman '/' ATAU jika di dalam jalur URL terdapat kata '/blog/' -->
             <a 
                 href="/" 
-                class="nav-link {% if request.url.path == '/' %}active{% endif %}">
+                class="nav-link {% if request.url.path == '/' or '/blog/' in request.url.path %}active{% endif %}">
                 Home
             </a>
             
-            <!-- 2. Menu About: Logika yang sama diterapkan untuk mengaktifkan kelas active -->
+            <!-- Menu About tetap menggunakan pencocokan kaku karena merupakan halaman tunggal mandiri -->
             <a 
                 href="/about" 
                 class="nav-link {% if request.url.path == '/about' %}active{% endif %}">
@@ -28,7 +27,6 @@
         </nav>
         <hr>
     </header>
-
     <!-- Ruangan Kosong 2: Tempat Isi Konten Utama Setiap Halaman -->
     <main>
         {% block konten %}
